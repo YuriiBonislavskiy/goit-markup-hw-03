@@ -234,7 +234,7 @@ html {
     margin: 0px;
 }
 
-.my-header1 {
+.bg-text {
     padding-top: 104px;
     /* 200px із макету = 104px + 94px (padding-top в Section) */
     padding-bottom: 40px;
