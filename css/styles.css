@@ -140,7 +140,6 @@ html {
     font-size: 14px;
     line-height: 1.172;
     letter-spacing: 0.02em;
-    text-decoration: none;
 }
 
 .f-menu-list {
@@ -179,6 +178,11 @@ html {
     margin: 0px;
     padding: 0px;
     text-decoration: none;
+}
+
+.f-menu:hover,
+.f-contacts:hover {
+    color: var(--select-color);
 }
 
 #current-page,
@@ -308,6 +312,7 @@ html {
 /*                              Блок КОМАНДА */
 .team {
     background-color: var(--background-light);
+    padding-bottom: 94px;
 }
 
 .team-list {
@@ -362,6 +367,7 @@ html {
     letter-spacing: 0.03em;
     text-align: center;
     background: var(--background-light);
+    border: none;
     border-radius: 4px;
 }
 
