@@ -91,7 +91,7 @@ html {
 .f-services-list,
 .what-doing-list,
 .team-list,
-.baddress-list,
+.address-list,
 .button-list,
 .project-list {
     list-style-type: none;
@@ -217,6 +217,7 @@ html {
 
 .bottom-logo {
     color: var(--base-color2);
+
 }
 
 .basement>address {
@@ -229,13 +230,13 @@ html {
     color: var(--base-color2);
     /* margin-left: 215px; */
     margin-top: 28px;
-    padding-bottom: 12px;
-
 }
 
 .address-list {
-    margin: 0px;
-    padding: 0px;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+
 }
 
 .address-item {
@@ -248,7 +249,7 @@ html {
 }
 
 .address-item:last-child {
-    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .address-item:hover,
