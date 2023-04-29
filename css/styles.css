@@ -1,16 +1,17 @@
 /* Задання CSS-змінних */
 :root {
     --base-color: #757575;
-    --base-color2: #FFFFFF;
+    --base-color2: #ffffff;
     --header-color: #000000;
     --menu-item-color: #212121;
-    --select-color: #2196F3;
-    --background-dark: #2F303A;
-    --background-light: #F5F4FA;
+    --select-color: #2196f3;
+    --background-dark: #2f303a;
+    --background-light: #f5f4fa;
+    --project-item-color: #EEEEEE;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     color: var(--base-color);
 }
 
@@ -39,7 +40,6 @@ html {
     padding-bottom: 94px;
 }
 
-
 /* Стилі заголовків */
 .my-header1 {
     font-weight: 900;
@@ -66,7 +66,7 @@ html {
 .my-header3-3 {
     font-weight: 700;
     font-size: 18px;
-    line-height: 2.0;
+    line-height: 2;
     letter-spacing: 0.06em;
 }
 
@@ -92,7 +92,7 @@ html {
 .what-doing-list,
 .team-list,
 .address-list,
-.button-list,
+.p-button-list,
 .project-list {
     list-style-type: none;
 }
@@ -108,19 +108,20 @@ html {
 /* Стилі у HEDER і FOOTER*/
 /*          Верхній-Нижній Логотипи */
 
-
-
 /*                           HEDER */
 
+header {
+    border-bottom: 1px solid #ececec;
+}
+
 .top-line {
-    /* height: 80px; */
     display: flex;
-    border-bottom: 1px solid #ECECEC;
+    align-items: center;
 }
 
 .top-logo,
 .bottom-logo {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.192;
@@ -134,22 +135,15 @@ html {
     color: var(--select-color);
 }
 
-
-.top-logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
+.top-line>nav {
+    margin-left: 93px;
 }
 
 .f-menu-list {
-    /* padding: 0px;
-    margin-bottom: 0px; */
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 0px;
-    margin-left: 93px;
+    display: flex;
+    padding: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    display: flex;
 }
 
 .f-menu-item,
@@ -170,10 +164,8 @@ html {
 }
 
 .f-contacts-list {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 0px;
-    margin-left: 354px;
+    margin-left: auto;
+    padding: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
     display: flex;
@@ -188,44 +180,43 @@ html {
     margin-right: 0px;
 }
 
+.f-menu,
+.f-contacts {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: block;
+    text-decoration: none;
+}
 
 .f-menu {
     color: var(--menu-item-color);
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
 }
 
 .f-contacts {
     color: var(--base-color);
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
 }
 
+#current-page,
+#f-contacts-mail,
 .f-menu:hover,
 .f-contacts:hover {
     color: var(--select-color);
 }
 
-/* #current-page,
-#f-contacts-mail {
-    color: var(--select-color);
-} */
-
-
-
 /*                          FOOTER */
+footer {
+    background-color: var(--background-dark);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 .basement {
     color: var(--base-color);
-    background-color: var(--background-dark);
     /* height: 252px; */
-    padding-top: 60px;
 }
 
 .bottom-logo {
     color: var(--base-color2);
-
 }
 
 .basement>address {
@@ -244,7 +235,6 @@ html {
     margin-top: 12px;
     margin-bottom: 0px;
     padding-left: 0px;
-
 }
 
 .address-item {
@@ -270,26 +260,28 @@ html {
     text-decoration: none;
     padding: 0px;
     margin: 0px;
-
 }
-
 
 /* Сторінка СТУДІЯ */
 /* Стилі у MAIN */
 /*                              Блок BG HERO */
 
-.bg-box {
+.bg {
+    padding-bottom: 200px;
+    padding-top: 200px;
     background: var(--background-dark);
+}
+
+.bg-box {
     color: var(--base-color2);
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+
 }
 
 .bg-box .my-header1 {
     margin: auto;
     max-width: 696px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .bg-box>button {
@@ -300,9 +292,11 @@ html {
     border: none;
     background-color: var(--select-color);
     color: var(--base-color2);
-    /* height: 50px;
-    width: 200px; 
-    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    /* border-radius: 4px;
     margin-top: 40px;
     padding: 0px; */
 }
@@ -322,11 +316,13 @@ html {
 .f-services-list {
     display: flex;
     list-style-type: none;
+    padding: 0px;
     margin: 0px;
     /* margin-left: 215px; */
 }
 
 .f-services-item {
+    width: 270px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.714;
@@ -336,10 +332,11 @@ html {
 }
 
 .f-services-item .my-header3-1 {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .f-services-item>p {
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -349,17 +346,22 @@ html {
 
 /*                              Блок ЧИМ МИ ЗАЙМАЄМОСЬ */
 
+.what-doing {
+    padding-top: 0px;
+}
+
 .what-doing-box {
     text-align: center;
 }
 
 .what-doing-box .my-header2 {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .what-doing-list {
     display: flex;
     list-style-type: none;
+    padding-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
     /* margin-left: 215px; 
@@ -368,22 +370,24 @@ html {
 
 .what-doing-item {
     margin-right: 30px;
-
 }
 
 .what-doing-item:last-child {
     margin-right: 0px;
 }
 
-/*                              Блок КОМАНДА */
-.team-box {
-    background-color: var(--background-light);
-    text-align: center
-        /* padding-bottom: 94px; */
+.what-doing-item>img {
+    display: block;
 }
 
-.team .my-header2 {
-    padding-bottom: 50px;
+/*                              Блок КОМАНДА */
+.team {
+    background-color: var(--background-light);
+}
+
+.team-box {
+    text-align: center;
+    /* padding-bottom: 94px; */
 }
 
 .team-list {
@@ -391,6 +395,7 @@ html {
     display: flex;
     /* margin-left: 215px; */
     margin-top: 50px;
+    margin-bottom: 0px;
 }
 
 .team-item {
@@ -398,6 +403,7 @@ html {
     /* height: 368px;
     width: 270px; */
     margin-right: 30px;
+    padding-bottom: 30px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -407,7 +413,11 @@ html {
     margin-right: 0px;
 }
 
-.my-header3-2 {
+.team-image {
+    display: block;
+}
+
+.team-item .my-header3-2 {
     margin-top: 30px;
     padding: 0px;
 }
@@ -419,6 +429,7 @@ html {
     letter-spacing: 0.03em;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 0px;
     padding: 0px;
     color: var(--base-color);
 }
@@ -426,13 +437,19 @@ html {
 /* Сторінка ПОРТФОЛІО */
 /*                              Блок КНОПКИ */
 
-
-.button-list {
+.p-button-list {
     display: flex;
     justify-content: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    /* margin-left: 591px; */
+    margin: 0px;
+    padding: 0px;
+}
+
+.p-button-item {
+    margin-right: 8px;
+}
+
+.p-button-item:last-child {
+    margin-right: 0px;
 }
 
 .p-button {
@@ -445,62 +462,40 @@ html {
     background: var(--background-light);
     border: none;
     border-radius: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+
 }
 
+#p-button1,
 .p-button:hover,
 .p-button:focus {
     background-color: var(--select-color);
     color: var(--base-color2);
 }
 
-#p-button1 {
-    /* width: 73px; */
-    margin-right: 8px;
-}
-
-#p-button2 {
-    /* width: 125px; */
-    margin-right: 8px;
-}
-
-#p-button3 {
-    /* width: 112px; */
-    margin-right: 8px;
-}
-
-#p-button4 {
-    /* width: 103px; */
-    margin-right: 8px;
-}
-
-#p-button5 {
-    /* width: 130px; */
-    margin-right: 8px;
-}
-
 /*                              Блок ПРОЄКТИ */
-
-.portfolio-box {
-    margin-bottom: 0px;
-}
 
 .project-list {
     /*  margin-left: 215px; */
     padding: 0px;
-    margin-top: 40px;
+    margin-top: 50px;
     margin-bottom: 0px;
     display: flex;
     flex-wrap: wrap;
-    width: 1170px
+    width: 1170px;
 }
 
 .project-item {
-    width: calc((100% - 60px)/3);
+    width: calc((100% - 60px) / 3);
     text-decoration: none;
     margin-bottom: 30px;
     margin-right: 30px;
+    padding-bottom: 20px;
     color: var(--background-light);
-    border: 1px solid #EEEEEE;
+    border: 1px solid var(--project-item-color);
 }
 
 .project-item:nth-child(3n) {
@@ -509,11 +504,14 @@ html {
 
 .project-item:nth-last-child(-n + 3) {
     margin-bottom: 0px;
-
 }
 
 .project-link {
     text-decoration: none;
+}
+
+.project-image {
+    display: block;
 }
 
 .project-name {
